@@ -61,63 +61,67 @@ process_devices()
 ###################################################
 rm -f conf/.config.*
 ###################################################
-
-### ar71xx 74kc without USB
-export _CONF_ROUTER_WITHOUT_USB_PORT_=1
-
 devices=(
-	"ar71xx_generic_DEVICE_tl-wr841-v8"
-	"ar71xx_generic_DEVICE_tl-wr841-v8-cn"
-	"ar71xx_generic_DEVICE_tl-wr941nd-v6"
-	"ar71xx_generic_DEVICE_tl-wr941nd-v6-cn"
-	"ar71xx_generic_DEVICE_tl-wr941n-v7"
-)
-process_devices $devices "74kc"
-
-### ar71xx 24kc without USB  
-devices=(
-	"ar71xx_generic_DEVICE_tl-wr841-v9"
+	"ipq40xx_DEVICE_century_wr142ac"
 )
 process_devices $devices
 
-export -n _CONF_ROUTER_WITHOUT_USB_PORT_
+# ### ar71xx 74kc without USB
+# export _CONF_ROUTER_WITHOUT_USB_PORT_=1
 
-./def_config.sh
+# devices=(
+# 	"ar71xx_generic_DEVICE_tl-wr841-v8"
+# 	"ar71xx_generic_DEVICE_tl-wr841-v8-cn"
+# 	"ar71xx_generic_DEVICE_tl-wr941nd-v6"
+# 	"ar71xx_generic_DEVICE_tl-wr941nd-v6-cn"
+# 	"ar71xx_generic_DEVICE_tl-wr941n-v7"
+# )
+# process_devices $devices "74kc"
 
-###################################################
+# ### ar71xx 24kc without USB  
+# devices=(
+# 	"ar71xx_generic_DEVICE_tl-wr841-v9"
+# )
+# process_devices $devices
 
-### ar71xx 74kc with USB
-devices=(
-	"ar71xx_generic_DEVICE_csac"
-	"ar71xx_generic_DEVICE_domywifi-dw33d"
-	"ar71xx_generic_DEVICE_hq55-v1"
-	"ar71xx_generic_DEVICE_tl-wdr7500-v3"
-	"ar71xx_generic_DEVICE_tl-wdr4310-v1"
-	"ar71xx_generic_DEVICE_tl-wr1041n-v2"
-	"ar71xx_generic_DEVICE_tl-wr842n-v2"
-	"ar71xx_generic_DEVICE_tl-wr842n-v2-cn"
-)
-process_devices $devices "74kc"
+# export -n _CONF_ROUTER_WITHOUT_USB_PORT_
+
+# ./def_config.sh
+
+# ###################################################
+
+# ### ar71xx 74kc with USB
+# devices=(
+# 	"ar71xx_generic_DEVICE_csac"
+# 	"ar71xx_generic_DEVICE_domywifi-dw33d"
+# 	"ar71xx_generic_DEVICE_hq55-v1"
+# 	"ar71xx_generic_DEVICE_tl-wdr7500-v3"
+# 	"ar71xx_generic_DEVICE_tl-wdr4310-v1"
+# 	"ar71xx_generic_DEVICE_tl-wr1041n-v2"
+# 	"ar71xx_generic_DEVICE_tl-wr842n-v2"
+# 	"ar71xx_generic_DEVICE_tl-wr842n-v2-cn"
+# )
+# process_devices $devices "74kc"
 
 
-# ar71xx 24kc with USB  
-devices=(
-	"ar71xx_generic_DEVICE_tl-wr941nd-v2"
-)
-process_devices $devices
+# # ar71xx 24kc with USB  
+# devices=(
+# 	"ar71xx_generic_DEVICE_tl-wr941nd-v2"
+# )
+# process_devices $devices
 
 
-### 7621 with USB
-devices=(
-	"ramips_mt7621_DEVICE_wr1200js"
-	"ramips_mt7621_DEVICE_newifi-d2"
-	"ramips_mt7621_DEVICE_a3004ns"
-)
-process_devices $devices "1004kc"
+# ### 7621 with USB
+# devices=(
+# 	"ramips_mt7621_DEVICE_wr1200js"
+# 	"ramips_mt7621_DEVICE_newifi-d2"
+# 	"ramips_mt7621_DEVICE_a3004ns"
+# )
+# process_devices $devices "1004kc"
 
-### 7620 without USB
-devices=(
-	"ramips_mt7620_DEVICE_y1s"
-)
-process_devices $devices
+# ### 7620 without USB
+# devices=(
+# 	"ramips_mt7620_DEVICE_y1s"
+# )
+# process_devices $devices
 

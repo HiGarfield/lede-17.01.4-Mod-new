@@ -1,4 +1,4 @@
-name: Build LEDE newifi-d2
+name: Build LEDE century_wr142ac
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 env:
-  TARGET_DEVICE: newifi-d2
+  TARGET_DEVICE: century_wr142ac
   TZ: Asia/Shanghai
 
 jobs:
@@ -56,5 +56,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: steps.compile.outputs.status == 'success'
       with:
-        name: lede-newifi-d2
+        name: lede-century_wr142ac
         path: out
